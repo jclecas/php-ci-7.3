@@ -18,8 +18,7 @@ RUN \
 
 RUN \
     echo "memory_limit=1024M" > /usr/local/etc/php/conf.d/php.ini \
-    && echo "phar.readonly=Off" >> /usr/local/etc/php/conf.d/php.ini \
-    && echo "extension=zip.so" >> /usr/local/etc/php/conf.d/php.ini
+    && echo "phar.readonly=Off" >> /usr/local/etc/php/conf.d/php.ini
 
 RUN \
     mkdir -p ~/.ssh \
