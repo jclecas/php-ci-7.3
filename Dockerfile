@@ -14,12 +14,12 @@ RUN \
     && rm -rf /var/lib/apt/lists/*
 
 RUN \
+    docker-php-ext-install bcmath gd gettext intl pdo_mysql soap sockets xsl zip
+
+RUN \
     echo "memory_limit=1024M" > /usr/local/etc/php/conf.d/php.ini \
     && echo "phar.readonly=Off" >> /usr/local/etc/php/conf.d/php.ini \
     && echo "extension=zip.so" >> /usr/local/etc/php/conf.d/php.ini
-
-RUN \
-    docker-php-ext-install bcmath gd gettext intl pdo_mysql soap sockets xsl zip
 
 RUN \
     mkdir -p ~/.ssh \
