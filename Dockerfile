@@ -19,7 +19,7 @@ RUN \
     && echo "extension=zip.so" >> /usr/local/etc/php/conf.d/php.ini
 
 RUN \
-    docker-php-ext-install bcmath gd gettext intl pdo_mysql soap sockets xsl
+    docker-php-ext-install bcmath gd gettext intl pdo_mysql soap sockets xsl zip
 
 RUN \
     mkdir -p ~/.ssh \
